@@ -2,8 +2,16 @@ import * as dynamoose from 'dynamoose';
 
 export const UserSchema = new dynamoose.Schema(
   {
-    partition: String,
-    userID: Number,
+    partition: {
+      type: String,
+      hashKey: true,
+      required: true,
+    },
+    userID: {
+      type: Number,
+      hashKey: true,
+      required: true,
+    },
   },
   {
     saveUnknown: true,
