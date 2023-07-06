@@ -9,9 +9,28 @@ export class CatsController {
     return 'This action adds a new cat';
   }
 
-  @Get()
+  /*@Get()
   findAll(@Req() request: Request): string {
     return 'This action returns all cats';
+  }*/
+
+  @Get()
+  findSomeCats() {
+    const promise1 = new Promise((resolve) => {
+      resolve('completed');
+    });
+    const promise2 = 42;
+    const promise3 = new Promise((resolve) => {
+      setTimeout(resolve, 3000, 'foo');
+    });
+
+    return Promise.all([promise1, promise2, promise3])
+      .then((values) => {
+        return values;
+      })
+      .catch(() => {
+        return 'False';
+      });
   }
 
   @Get(':id')
