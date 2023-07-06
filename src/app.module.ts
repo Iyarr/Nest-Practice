@@ -2,8 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { CatsController } from './cats.controller';
-import { AsyncController } from './async.controller';
-import { AsyncService } from './async.service';
+import { AsyncController } from './async/async.controller';
+import { AsyncService } from './async/async.service';
 
 @Module({
   imports: [],

@@ -1,5 +1,4 @@
 import { Controller, Get, Post, Req, HttpCode, Param } from '@nestjs/common';
-import Request from 'express';
 
 @Controller('cats')
 export class CatsController {
